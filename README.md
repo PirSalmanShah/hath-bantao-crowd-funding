@@ -79,52 +79,31 @@ cp .env.example .env.local
 
 # 4. Run the development server
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-App will be running at `http://localhost:3000`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-## 🔐 Environment Variables
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Ensure the following variables are set in `.env.local`:
+## Learn More
 
-```env
-MONGODB_URI=your_mongo_connection_string
-GITHUB_ID=your_github_oauth_id
-GITHUB_SECRET=your_github_oauth_secret
-NEXTAUTH_SECRET=your_nextauth_secret
-SQUARE_APP_ID=your_square_app_id
-SQUARE_ACCESS_TOKEN=your_square_access_token
-```
+To learn more about Next.js, take a look at the following resources:
 
-**Note:** `.env.local` is ignored via `.gitignore`.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 🖼️ Project Screens
+## Deploy on Vercel
 
-Here’s how the platform is visually organized:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- ✅ **Landing Section**: “Help the person you believe in” – showcases ways fans want to help.
-- ✅ **About Section**: Describes what Hath Bantao is and why it matters.
-- ✅ **Community SVG Icons**: Transparent white-stroke icons for clean UI.
-- ✅ **Mobile-First**: Tailwind’s utility classes for full responsiveness.
-
-
-
-## 🙌 Contribute
-
-Want to contribute to Hath Bantao?
-
-1. Fork the repo  
-2. Create your feature branch (`git checkout -b feature/my-feature`)  
-3. Commit your changes (`git commit -m 'Add new feature'`)  
-4. Push to the branch (`git push origin feature/my-feature`)  
-5. Create a Pull Request
-
----
-
-## 💬 Inspiration
-
-This project was built with empathy in mind — for anyone who's ever needed a helping hand, and for those who are ready to give one.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
