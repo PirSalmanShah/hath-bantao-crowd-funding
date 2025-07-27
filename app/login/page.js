@@ -16,7 +16,7 @@ const Page = () => {
   }
   
     
-  }, [session])
+  }, [session,router])
   
   
   return (

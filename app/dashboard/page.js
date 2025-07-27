@@ -15,7 +15,7 @@ const Page = () => {
   }
   
     
-  }, [session])
+  }, [session,router])
   
   const updateSession = async (e)=>{
     await SubmitForm(e);

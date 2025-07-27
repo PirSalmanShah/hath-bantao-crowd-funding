@@ -19,7 +19,7 @@ const UserName = ({ params }) => {
     }
 
 
-  }, [session])
+  }, [session,router])
   
   const [supporters, setSupporters] = useState([])
   const [value, setValue] = useState("")
@@ -81,7 +81,7 @@ const UserName = ({ params }) => {
             <h3 className='text-2xl font-bold'>Supporters</h3>
             <ul className='overflow-y-auto'>
               {supporters.map((item,index)=>{
-                return <li key={index}><span className='font-bold'>${item.amount}</span> donation by <span className='font-bold'>{item.name}</span> message <span>"{item.message}"</span></li>
+                return <li key={index}><span className='font-bold'>{`$ ${item.amount}`}</span> donation by <span className='font-bold'>{item.name}</span> message <span>{`"${item.message}"`}</span></li>
               })}
               
               

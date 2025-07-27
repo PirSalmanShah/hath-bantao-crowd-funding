@@ -18,7 +18,7 @@ const CreditCardForm = () => {
         }
 
 
-    }, [session])
+    }, [session,router])
     const [status, setStatus] = useState("idle")
 
     const processPayment = async () => {
