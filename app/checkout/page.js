@@ -9,16 +9,20 @@ const CreditCardForm = () => {
     const { data: session } = useSession()
     const searchParams = useSearchParams()
     const router = useRouter()
-    const name = decodeURIComponent(searchParams.get("name"))
-    const amount = decodeURIComponent(searchParams.get("amount"))
-    const message = decodeURIComponent(searchParams.get("message"))
+    useEffect(() => {
+        const name = decodeURIComponent(searchParams.get("name"))
+        const amount = decodeURIComponent(searchParams.get("amount"))
+        const message = decodeURIComponent(searchParams.get("message"))
+    }, [])
+
+
     useEffect(() => {
         if (!session) {
             router.push("/login")
         }
 
 
-    }, [session,router])
+    }, [session, router])
     const [status, setStatus] = useState("idle")
 
     const processPayment = async () => {
