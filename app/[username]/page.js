@@ -50,7 +50,7 @@ const UserName = ({ params }) => {
     getdata()
 
 
-  }, [])
+  }, [router])
 
 
   useEffect(() => {
@@ -72,9 +72,9 @@ const UserName = ({ params }) => {
         <div className='text-center text-3xl font-bold'>{param.username}</div>
         <div className='text-neutral-500 text-center'>Creating Pixel drain</div>
         <div className='text-neutral-500 flex justify-center items-center gap-4'>
-          <div>14,300 paid members</div>
-          <div>57 posts</div>
-          <div>$56,750/month</div>
+          <div>{`14,300 paid members`}</div>
+          <div>{`57 posts`}</div>
+          <div>{`$56,750/month`}</div>
         </div>
         <div className="payments flex flex-col sm:flex-row  sm:justify-center gap-3 w-full sm:w-[80%] sm:mx-auto my-3">
           <div className="supporters bg-white/5 backdrop-blur-[3px] w-full sm:w-[50%] rounded-lg p-2">
@@ -97,9 +97,9 @@ const UserName = ({ params }) => {
 
               <input required type="text" name="amount" id="makepayment" placeholder='Enter Amount' onChange={(e) => { setValue(e.target.value) }} value={value} className='p-2.5 bg-transparent appearance-none rounded-full border-1 border-netural w-full outline-none transition-all duration-300 focus:shadow-2xl focus:border-white/50 focus:shadow-white/50' />
               <div className='flex gap-3 '>
-                <button className='p-2.5  bg-transparent appearance-none rounded-full border-1 border-netural w-fit outline-none transition-all duration-300 hover:shadow-2xl hover:border-white/50 hover:shadow-white/50' onClick={() => { setValue(5) }}>Pay $5</button>
-                <button className='p-2.5  bg-transparent appearance-none rounded-full border-1 border-netural w-fit outline-none transition-all duration-300 hover:shadow-2xl hover:border-white/50 hover:shadow-white/50' onClick={() => { setValue(10) }}>Pay $10</button>
-                <button className='p-2.5  bg-transparent appearance-none rounded-full border-1 border-netural w-fit outline-none transition-all duration-300 hover:shadow-2xl hover:border-white/50 hover:shadow-white/50' onClick={() => { setValue(20) }}>Pay $20</button>
+                <button className='p-2.5  bg-transparent appearance-none rounded-full border-1 border-netural w-fit outline-none transition-all duration-300 hover:shadow-2xl hover:border-white/50 hover:shadow-white/50' onClick={() => { setValue(5) }}>{`Pay $5`}</button>
+                <button className='p-2.5  bg-transparent appearance-none rounded-full border-1 border-netural w-fit outline-none transition-all duration-300 hover:shadow-2xl hover:border-white/50 hover:shadow-white/50' onClick={() => { setValue(10) }}>{`Pay $10`}</button>
+                <button className='p-2.5  bg-transparent appearance-none rounded-full border-1 border-netural w-fit outline-none transition-all duration-300 hover:shadow-2xl hover:border-white/50 hover:shadow-white/50' onClick={() => { setValue(20) }}>{`Pay $20`}</button>
               </div>
               <button type='submit' className='p-2.5  bg-transparent appearance-none rounded-full border-1 border-netural w-24 outline-none transition-all duration-300 hover:shadow-2xl hover:border-white/50 hover:shadow-white/50'>Process</button>
             </form>

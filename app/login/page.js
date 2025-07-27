@@ -2,7 +2,7 @@
 import React,{useEffect} from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession, signIn } from "next-auth/react"
 
 const Page = () => {
   const { data: session } = useSession()
