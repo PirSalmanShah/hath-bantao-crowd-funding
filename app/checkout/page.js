@@ -7,9 +7,9 @@ import { handlePayment } from '../actions/processPayment';
 
 const CreditCardForm = () => {
     const { data: session } = useSession()
-    const searchParams = useSearchParams()
     const router = useRouter()
     useEffect(() => {
+        const searchParams = useSearchParams()
         const name = decodeURIComponent(searchParams.get("name"))
         const amount = decodeURIComponent(searchParams.get("amount"))
         const message = decodeURIComponent(searchParams.get("message"))
