@@ -1,5 +1,5 @@
 "use client"
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 
 import { useSession } from "next-auth/react"
@@ -8,12 +8,16 @@ import { handlePayment } from '../actions/processPayment';
 const CreditCardForm = () => {
     const { data: session } = useSession()
     const router = useRouter()
-    useEffect(() => {
-        const searchParams = useSearchParams()
-        const name = decodeURIComponent(searchParams.get("name"))
-        const amount = decodeURIComponent(searchParams.get("amount"))
-        const message = decodeURIComponent(searchParams.get("message"))
-    }, [])
+ const [params, setParams] = useState({ name: "", amount: "", message: "" });
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    setParams({
+      name: decodeURIComponent(searchParams.get("name") || ""),
+      amount: decodeURIComponent(searchParams.get("amount") || ""),
+      message: decodeURIComponent(searchParams.get("message") || "")
+    });
+  }, []);
 
 
     useEffect(() => {
@@ -28,7 +32,7 @@ const CreditCardForm = () => {
     const processPayment = async () => {
         console.log("fired")
         setStatus("loading")
-        await handlePayment(name, amount, message)
+        await handlePayment(params.name, params.amount, params.message)
         await new Promise(resolve => { setTimeout(resolve, 2000) })
         setStatus("done")
         await new Promise(resolve => { setTimeout(resolve, 2000) })
@@ -168,7 +172,7 @@ const CreditCardForm = () => {
                             onChange={(e) => handleInputChange('cardName', e.target.value, 50)}
                         />
                     </div>
-                    <button onClick={processPayment} className='my-3 p-2.5  bg-transparent appearance-none rounded-full border-1 border-netural w-full outline-none transition-all duration-300 hover:shadow-2xl hover:border-white/50 hover:shadow-white/50' >Pay ${amount}</button>
+                    <button onClick={processPayment} className='my-3 p-2.5  bg-transparent appearance-none rounded-full border-1 border-netural w-full outline-none transition-all duration-300 hover:shadow-2xl hover:border-white/50 hover:shadow-white/50' >{`Pay $ ${params.amount}`}</button>
                 </div>
 
                 {/* Credit Card Display */}
