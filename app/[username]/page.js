@@ -42,7 +42,7 @@ const UserName = ({ params }) => {
   useEffect(() => {
     const getdata = async () => {
 
-      let response = await fetch("http://localhost:3000/api/supportList")
+      let response = await fetch("https://hath-bantao-crowd-funding-onuaq18dr-pir-salman-shahs-projects.vercel.app/api/supportList")
       let b = await response.json()
       setSupporters(b)
       // console.log(supporters)
