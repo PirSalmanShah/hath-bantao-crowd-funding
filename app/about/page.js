@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <div className="bg-black text-white min-h-screen px-6 py-16">
@@ -15,7 +16,7 @@ const page = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <img src="logo.svg" width={400} alt="Helping hands" className="rounded-xl shadow-lg" />
+          <Image src="logo.svg" width={400} alt="Helping hands" className="rounded-xl shadow-lg" />
 
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold">Our Mission</h2>
@@ -40,7 +41,7 @@ const page = () => {
             </p>
           </div>
 
-          <img src="community.svg" width={400} alt="Community support" className="rounded-xl shadow-lg" />
+          <Image src="community.svg" width={400} alt="Community support" className="rounded-xl shadow-lg" />
         </div>
 
         <div className="text-center mt-12">
@@ -60,4 +61,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

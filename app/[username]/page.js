@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useSession } from "next-auth/react"
 import { use } from 'react';
 import { useRouter } from 'next/navigation'
-
+import Image from 'next/image';
 
 
 
@@ -63,9 +63,9 @@ const UserName = ({ params }) => {
     <div className='text-white'>
 
       <div className='w-full  relative '>
-        <img className='object-cover h-[340px] w-full' src="cover.gif" alt="" />
+        <Image className='object-cover h-[340px] w-full' src="cover.gif" alt="" />
 
-        <img className='w-20 rounded-full  absolute left-[130px] sm:left-[380px] md:left-[47%] -bottom-[30px]' src="profile.gif" alt="" />
+        <Image className='w-20 rounded-full  absolute left-[130px] sm:left-[380px] md:left-[47%] -bottom-[30px]' src="profile.gif" alt="" />
 
       </div>
       <div className='my-8'>

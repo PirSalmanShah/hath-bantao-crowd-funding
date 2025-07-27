@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react"
 import { useRouter } from 'next/navigation'
 import { SubmitForm } from '../actions/handleForm'
 
-const page = () => {
+const Page = () => {
 
   const { data: session, update } = useSession()
   const router =useRouter()
@@ -47,4 +47,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

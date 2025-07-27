@@ -12,7 +12,7 @@ export default function Home() {
           Show Your Support
         </div>
         <p className="w-1/2 text-center">
-          Hath Bantao is a community-driven crowdfunding platform built to bring people together for a greater cause. Whether it's helping someone in need, supporting a creative idea, or funding a social initiative, Hath Bantao makes it easy to join hands and make a real difference. Every contribution counts — because when hands come together, change begins.
+          Hath Bantao is a community-driven crowdfunding platform built to bring people together for a greater cause. Whether it&apos;s helping someone in need, supporting a creative idea, or funding a social initiative, Hath Bantao makes it easy to join hands and make a real difference. Every contribution counts — because when hands come together, change begins.
         </p>
         <div>
          <Link href={"/login"}> <button type="button" className="text-white backdrop-blur-sm bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Support Now</button></Link>
@@ -27,17 +27,17 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center mb-14">Support the project you believe in</h2>
         <div className="flex gap-5 justify-around">
           <div className="item space-y-3 flex flex-col items-center justify-center">
-            <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/man.gif" alt="" />
+            <Image className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/man.gif" alt="" />
             <p className="font-bold text-center">Backers want to donate</p>
             <p className="text-center">People are ready to support your idea with donations</p>
           </div>
           <div className="item space-y-3 flex flex-col items-center justify-center">
-            <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/coin.gif" alt="" />
+            <Image className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/coin.gif" alt="" />
             <p className="font-bold text-center">Backers want to invest</p>
             <p className="text-center">Supporters are interested in funding your mission</p>
           </div>
           <div className="item space-y-3 flex flex-col items-center justify-center">
-            <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/group.gif" alt="" />
+            <Image className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/group.gif" alt="" />
             <p className="font-bold text-center">Backers want to collaborate</p>
             <p className="text-center">People want to partner and bring your vision to life</p>
           </div>
@@ -52,10 +52,10 @@ export default function Home() {
         <div className="w-[90%] h-[40vh] md:w-[50%] md:h-[40vh] lg:w-[50%] lg:h-[40vh] xl:w-[50%] xl:h-[40vh] flex flex-col justify-center items-center text-center text-white space-y-4">
           <h3 className="text-2xl font-semibold">About Hath Bantao</h3>
           <p className="text-sm md:text-base px-2">
-            <span className="font-bold">Hath Bantao</span> is more than just a crowdfunding platform — it's a community of believers, dreamers, and doers. We empower individuals to support causes, people, and projects they care about.
+            <span className="font-bold">Hath Bantao</span> is more than just a crowdfunding platform — it&apos;s a community of believers, dreamers, and doers. We empower individuals to support causes, people, and projects they care about.
           </p>
           <p className="text-sm md:text-base px-2">
-            Whether you're raising funds or lending a hand, <span className="font-bold">Hath Bantao</span> helps turn support into real impact. Join us in building a better tomorrow — one extended hand at a time.
+            Whether you&apos;re raising funds or lending a hand, <span className="font-bold">Hath Bantao</span> helps turn support into real impact. Join us in building a better tomorrow — one extended hand at a time.
           </p>
         </div>
       </div>
