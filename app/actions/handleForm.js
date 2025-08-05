@@ -22,7 +22,5 @@ export const SubmitForm = async(e)=>{
     }
     await User.findOneAndUpdate({email:session.user.email},update)
     
-    // console.log("++++++++++++++++++")
-    // console.table(e.get("newCoverPic"))
-    // console.log("++++++++++++++++++")
+    
 }

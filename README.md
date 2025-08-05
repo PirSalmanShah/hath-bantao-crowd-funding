@@ -4,19 +4,8 @@
 > *Hath Bantao* is a community-driven crowdfunding platform that connects people who need help with those who want to help.
 
 ---
+![Hath Bantao Screenshot](public/home.png)
 
-## 📌 Table of Contents
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Folder Structure](#folder-structure)
-- [How to Run Locally](#how-to-run-locally)
-- [Environment Variables](#environment-variables)
-- [Project Screens](#project-screens)
-- [License](#license)
-- [Contribute](#contribute)
-
----
 
 ## 📖 About the Project
 
@@ -29,7 +18,7 @@ The platform is inspired by the values of unity, compassion, and action. Users c
 
 
 ---
-
+![Hath Bantao Screenshot](public/profile.png)
 ## 🌟 Features
 
 - 🙋‍♂️ **User Profiles** – Manage basic user info like `username`, `email`, `profilePic`, and `coverPic`.

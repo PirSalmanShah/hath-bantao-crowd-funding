@@ -19,10 +19,7 @@ export const authOptions ={
     const email = user?.email || profile?.email;
     const nameOfUser = user?.name
     // Connect to database
-    // console.log(user)
-    // console.log(account)
-    // console.log(profile)
-    // console.log(email)
+    
     await mongoose.connect(process.env.MONGODB_URI)
     
     const currentUser = await User.findOne({email:email})
@@ -42,7 +39,7 @@ export const authOptions ={
   async session({ session, token, user }) {
     // Ensure name and email are passed into the session
     const dbusername = await User.findOne({email:session.user.email})
-    console.log(dbusername)
+   
     session.user.name = dbusername.username
     session.user.email= dbusername.email
     return session

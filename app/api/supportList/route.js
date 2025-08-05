@@ -8,7 +8,7 @@ try {
 }
 export async function GET() {
     const list = await Payment.find({}, { name: 1, amount: 1 ,message: 1}).sort({createdAt:-1})
-    console.log(list)
+   
     return new Response(JSON.stringify(list))
 }
 

@@ -30,7 +30,7 @@ const CreditCardForm = () => {
     const [status, setStatus] = useState("idle")
 
     const processPayment = async () => {
-        console.log("fired")
+      
         setStatus("loading")
         await handlePayment(params.name, params.amount, params.message)
         await new Promise(resolve => { setTimeout(resolve, 2000) })
@@ -39,7 +39,7 @@ const CreditCardForm = () => {
         router.push(`/${session?.user?.name}`)
     }
 
-    console.log(session?.user?.name)
+   
 
     const [cardData, setCardData] = useState({
         cardNumber: '4256 4256 4256 4256',

@@ -26,9 +26,7 @@ const UserName = ({ params }) => {
 
 
   const sentPaymentDetail = async (e) => {
-    // console.log(e.get("userName"))
-    // console.log(e.get("amount"))
-    // console.log(e.get("message"))
+    
     const name =e.get("userName")
     const amount = e.get("amount")
     const message = e.get("message")
@@ -45,7 +43,7 @@ const UserName = ({ params }) => {
       let response = await fetch("https://hath-bantao-crowd-funding.vercel.app/api/supportList")
       let b = await response.json()
       setSupporters(b)
-      // console.log(supporters)
+     
     }
     getdata()
 
@@ -53,9 +51,7 @@ const UserName = ({ params }) => {
   }, [router])
 
 
-  useEffect(() => {
-    console.log(supporters)
-  }, [supporters])
+
 
 
 
